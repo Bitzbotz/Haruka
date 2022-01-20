@@ -225,7 +225,7 @@ const salam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
 						const isGroupAdmins = groupAdmins.includes(sender) || false
 						
 			//fake reply
-			let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net",   "remoteJid": "6289523258649-1604595598@g.us"  }, "message": {orderMessage: {itemCount: 2021,status: 200, thumbnail: thumbnail, surface: 200, message: `${botname} 🏟️\nBy ${ownername}`, orderTitle: 'zeeoneofc', sellerJid: '0@s.whatsapp.net'}},sendEphemeral: true}
+			let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net",   "remoteJid": "6289523258649-1604595598@g.us"  }, "message": {orderMessage: {itemCount: 9999999999999999999999999999999,status: 200, thumbnail: thumbnail, surface: 200, message: `${botname} 🏟️\nBy ${ownername}`, orderTitle: 'zeeoneofc', sellerJid: '0@s.whatsapp.net'}},sendEphemeral: true}
       	  let fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `© ${ownername}`,jpegThumbnail: thumbnail}}}
    	     let fvn = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds":99999,"ptt": "true"}} } 
 	        let fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title":`© ${ownername}`, "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `${botname} 🏟️\nBy ${ownername}`, 'jpegThumbnail': thumbnail}}}
@@ -457,18 +457,18 @@ const salam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
 		        if (!isAntiLink) return
 		        if (isGroupAdmins) return
 		        var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		        await haruka.sendMessage(from, `Hmm maap nih gua kick, dilarang share link di group ini`, text , {quoted: mek})
-		        haruka.groupRemove(from, [kic]).catch((e)=>{reply(`Bot Harus Jadi Admin`)})
+		        await haruka.sendMessage(from, `LINK GROUP DETECTED...MAAF KAMU AKAN DIKICK DARI GRUP❤🍭`, text , {quoted: mek})
+		        haruka.groupRemove(from, [kic]).catch((e)=>{reply(`BOTNYA HARUS JADI ADMIN UNTUK MENGGUNAKAN COMMAND KICK❤🍭`)})
 		        }
 			//game 
 			if (tebakgambar.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
                 jawaban = tebakgambar[sender.split('@')[0]]
                 if (budy.toLowerCase() == jawaban) {
-                    sendButMessage(from, "Selamat Jawaban kamu benar!", `� ${ownername}`, [{"buttonId": `.tebakgambar`,"buttonText": {"displayText": "Tebak Gambar"},"type": "RESPONSE"}], {quoted : mek})
+                    sendButMessage(from, "Selamat Jawaban kamu benar,yg benar bisa ngewe sama aku kak❤🍭!", `� ${ownername}`, [{"buttonId": `.tebakgambar`,"buttonText": {"displayText": "Tebak Gambar"},"type": "RESPONSE"}], {quoted : mek})
                     delete tebakgambar[sender.split('@')[0]]
                     fs.writeFileSync("./database/game/tebakgambar.json", JSON.stringify(tebakgambar))
                 } else {
-                    reply("Jawaban Salah!")
+                    reply("Jawaban Salah kak,coba jawab lagi!")
                 }
             }
 			colors = ['red', 'pink', 'white', 'black', 'blue', 'yellow', 'green']
@@ -491,7 +491,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 				break
 case 'infobot':
 if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
-			reply('Update bot selanjutnya silahkan cek YouTube zeeone ofc')
+			reply('Jangan lupa donasi buat beli kuota kak❤🍭')
 break
 case 'owner':{
 	if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
@@ -508,7 +508,7 @@ case 'owner':{
 					"displayName": `${ini_list.length} kontak`,
 					"contacts": ini_list 
 					}, 'contactsArrayMessage', { quoted: mek })
-					haruka.sendMessage(from, `Nih Kak Contact Owner Ku, Cuma Sv Nomor Cewe Ya 🤝`, text, {quoted: hehe})
+					haruka.sendMessage(from, `Nih Kak Contact Owner Ku,Jangan di spam kak, Cuma Sv Nomor Cewe Ya ❤🍭`, text, {quoted: hehe})
 				}
 			break
 case 'sticker':case 'stiker':case 'stickergif':case 'stikergif':case 'sgif':case 's':
@@ -549,7 +549,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 						console.log(`Error : ${err}`)
 						fs.unlinkSync(media)
 						tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-						reply(`❌ Gagal, pada saat mengkonversi ${tipe} ke stiker`)
+						reply(`❌ Yah Gagal Kak❤🍭, pada saat mengkonversi ${tipe} ke stiker❤🍭`)
 						})
 						.on('end', function () {
 							console.log('Finish')
@@ -561,7 +561,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 							.toFormat('webp')
 							.save(ran)
 							} else  {
-								reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim\nDurasi sticker video 1-9 detik...`)
+								reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim\nDurasi sticker video 1-9 detik❤🍭...`)
 							}
 					
              break
@@ -569,7 +569,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 // download fix by zeeone
 case 'ig': case 'igdl': 
 if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
-	if (!q) return reply('Linknya?')
+	if (!q) return reply('Linknya mana❤🍭?')
 	if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply(mess.errorLink)
 	let urlnya = q
 	zee.igdl(urlnya)
@@ -583,7 +583,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
                     haruka.sendMessage(from,link,image,{thumbnail: Buffer.alloc(0), quoted: mek,caption: `Instagram • ${i.type}`})                  
                 }
             }
-            }).catch((err) => reply(`🤲 Server eror`))
+            }).catch((err) => reply(` Servernya lagi eror kak❤🍭`))
             
              break
 case 'tiktok':
@@ -706,7 +706,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 			var mulaikah = aramat[0].url
 			try {
 				xa.Youtube(mulaikah).then(async (data) => {
-					if (Number(data.medias[7].formattedSize) >= 100000) return sendMediaURL(from, thumb, `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Untuk durasi lebih dari batas disajikan dalam bentuk link_`)
+					if (Number(data.medias[7].formattedSize) >= 100000) return sendMediaURL(from, thumb, `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Filenya terlalu besar dirahimku jadinya aku kirim pake link aja ya kak❤🍭🥰_`)
 						const captions = `*---- 「 PLAY MUSIC 」----*
 						
 • Title : ${aramas.videos[0].title}
@@ -720,7 +720,7 @@ var thumbyt = await getBuffer(aramas.videos[0].thumbnail)
 sendButLocation(from, captions, '© ' + ownername, thumbyt, [{buttonId: `.ytmp4 ${mulaikah}`, buttonText: {displayText: 'Video'}, type: 1},{buttonId: `.ytmp3 ${mulaikah}`, buttonText:{displayText: 'Audio'}, type: 1}], {quoted: mek})
 						})
 				} catch (err) {
-					reply('Terjadi kesalahan')
+					reply('Terjadi kesalahan❤🍭')
 					}
 			
              break
@@ -742,25 +742,25 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 			if (!isGroupAdmins) return reply(lang.admin(groupName))
 			if (!isBotGroupAdmins) return reply(lang.adminB())
 					if (Number(args[0]) === 1) {
-						if (isAntiLink) return reply('Telah di aktifkan sebelumnya')
+						if (isAntiLink) return reply('Udah Aktif Dari Tadi Kak❤🍭')
 						antilink.push(from)
 						fs.writeFileSync('./database/group/antilink.json', JSON.stringify(antilink))
-						reply(`✅ Berhasil mengaktifkan ${command}`)
+						reply(`✅ Berhasil mengaktifkan❤🍭 ${command}`)
 					} else if (Number(args[0]) === 0) {
 						if (!isAntiLink) return reply('Udh mati')
 						var ini = anti.botLangsexOf(from)
 						antilink.splice(ini, 1)
 						fs.writeFileSync('./database/group/antilink.json', JSON.stringify(antilink))
-						reply(`✅ Berhasil mematikan ${command}`)
+						reply(`✅ Berhasil mematikan❤🍭 ${command}`)
 					} else {
-						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
+						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan❤🍭')
 					}
 					break		
 case 'memegenerator': case 'memegen':{
 									if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
 									if (!q.includes('|')) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
 									try {
-										if (!isQuotedImage) return reply(`Reply Gambar!`)
+										if (!isQuotedImage) return reply(`Reply Gambar❤🍭!`)
 										reply(lang.wait())
 										var teks1 = q.split('|')[0] ? q.split('|')[0] : ''
 										var teks2 = q.split('|')[1] ? q.split('|')[1] : ''
@@ -777,10 +777,10 @@ case 'memegenerator': case 'memegen':{
 										}
 									break
 					 	case 'stickermeme': case 'memesticker': case 'memestick': case 'stickmeme': case 'stcmeme': case 'smeme':{
-						if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* Alphabot`)
-									if (q.includes('|')) return reply(`Kirim perintah *${prefix + command}* Alphabot`)
+						if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* Lisabotz❤🍭`)
+									if (q.includes('|')) return reply(`Kirim perintah *${prefix + command}* Lisabotz❤🍭`)
 									try {
-										if (!isQuotedImage) return reply(`Reply Gambar!`)
+										if (!isQuotedImage) return reply(`Reply Gambar❤🍭!`)
 										reply(lang.wait())
 										var teks2 = args.join(' ')
 										var enmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
@@ -848,7 +848,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 			if (!isGroupAdmins) return reply(lang.admin(groupName))
 			if (!isBotGroupAdmins) return reply(lang.adminB())
 					await haruka.groupUpdateSubject(from, `${q}`)
-					haruka.sendMessage(from, `Sukses Mengubah Nama Grup Menjadi ${q}`, text, { quoted: mek })
+					haruka.sendMessage(from, `Sukses Mengubah Nama Grup Menjadi❤🍭 ${q}`, text, { quoted: mek })
 			break          
 case 'setdesc': case 'setdesk':
 if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
@@ -856,7 +856,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 			if (!isGroupAdmins) return reply(lang.admin(groupName))
 			if (!isBotGroupAdmins) return reply(lang.adminB())
 					await haruka.groupUpdateDescription(from, `${q}`)
-					haruka.sendMessage(from, `Sukses Mengubah Desk Grup Menjadi ${q}`, text, { quoted: mek })
+					haruka.sendMessage(from, `Sukses Mengubah Desk Grup Menjadi❤🍭 ${q}`, text, { quoted: mek })
 			break   
 case 'kick':
 if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
@@ -866,7 +866,7 @@ if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button 
 			if(!q)return reply(`*Format salah!*\n\n*Example : ${prefix + command} @tag*`)
 			var kickya = q.split('@')[1] + '@s.whatsapp.net'
 			await haruka.groupRemove(from, [kickya])
-			reply(`Succses kick target!`)
+			reply(`Succses kick target,ahh yamete❤🍭!`)
 break
 case 'bc': case 'broadcast':
 			if (!isOwner) return reply(lang.owner(botname))
@@ -1002,7 +1002,7 @@ case 'toimg':{
 					fs.unlinkSync(mediaa)
 					if (err) return reply('Eror')
 					buffer = fs.readFileSync(ran)
-					haruka.sendMessage(from, buffer, image, {quoted: mek, thumbnail:Buffer.alloc(0), caption: 'Done'})
+					haruka.sendMessage(from, buffer, image, {quoted: mek, thumbnail:Buffer.alloc(0), caption: 'Jangan Lupa Donasi Ke Ownerku Kak❤🍭'})
 					fs.unlinkSync(ran)
 					})
 					}
@@ -1030,7 +1030,7 @@ case 'nuliskiri':{
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										haruka.sendMessage(from, fs.readFileSync('./database/media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Hati-hati ketahuan!`})
+										haruka.sendMessage(from, fs.readFileSync('./database/media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Udah Jadi Nih kak,ehemm kamu mau gk jadi pacar aku hehe❤🍭!`})
 										
 										})
 									}
@@ -1058,7 +1058,7 @@ case 'nuliskiri':{
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										haruka.sendMessage(from, fs.readFileSync('./database/media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Hati-hati ketahuan!`})
+										haruka.sendMessage(from, fs.readFileSync('./database/media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Udah Jadi Nih kak,ehemm kamu mau gk jadi pacar aku hehe❤🍭!`})
 										
 										})
 									}
@@ -1086,7 +1086,7 @@ case 'nuliskiri':{
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										haruka.sendMessage(from, fs.readFileSync('./database/media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Hati-hati ketahuan!`})
+										haruka.sendMessage(from, fs.readFileSync('./database/media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Udah Jadi Nih kak,ehemm kamu mau gk jadi pacar aku hehe❤🍭!`})
 										
 										})
 									}
@@ -1114,7 +1114,7 @@ case 'nuliskiri':{
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										haruka.sendMessage(from, fs.readFileSync('./database/media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Hati-hati ketahuan!`})
+										haruka.sendMessage(from, fs.readFileSync('./database/media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: mek, caption: `Udah Jadi Nih kak,ehemm kamu mau gk jadi pacar aku hehe❤🍭!`})
 										
 									})
 									}
