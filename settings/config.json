@@ -5,8 +5,8 @@
 	"thumbnail":"./settings/IMG_20220105_213556_619.jpg",
 	"background":"https://telegra.ph/file/d4c05638fa7886a1d8060.jpg",
 	"limit": {
-		"free":999999999999,
-		"premium":999999999999
+		"free":100,
+		"premium":9999
 	},
 	"session_name":"./session.json"
 }
